@@ -61,13 +61,24 @@ You can customize the deployment by modifying the Kubernetes configuration files
 
 Feel free to explore and adapt these files to fit your specific needs.
 
-## Cleaning Up
+Accessing the Application
+-------------------------
 
-To clean up and tear down the Kubernetes cluster, use the following commands:
+To access the application, you will need to access the NodePort service for the k8s-demo-app container by navigating to `http://<node-ip>:<node-port>` in your web browser.
 
-```bash
-kubectl delete -f deployment.yaml
-kubectl delete -f kubernetes/cluster.yaml
+Cleaning Up
+-----------
+
+To delete the MongoDB and k8s-demo-app deployments, run the following command:
+```
+kubectl delete deployment mongo-deployment webapp-deployment
 ```
 
-This will remove the deployed application and the Kubernetes cluster from your environment.
+To delete the NodePort service, run the following command:
+```
+kubectl delete service webapp-service
+```
+
+Conclusion
+----------
+this is just an example on how to deploy a Kubernetes cluster using a docker image
