@@ -76,7 +76,7 @@ kubectl delete deployment java-docker-app
 
 To delete the NodePort service, run the following command:
 ```
-kubectl delete service webapp-service
+kubectl delete service java-docker-service
 ```
 
 Conclusion
