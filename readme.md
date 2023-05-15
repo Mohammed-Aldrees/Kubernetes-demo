@@ -71,7 +71,7 @@ Cleaning Up
 
 To delete the MongoDB and k8s-demo-app deployments, run the following command:
 ```
-kubectl delete deployment deployment.yaml
+kubectl delete deployment java-docker-deployment
 ```
 
 To delete the NodePort service, run the following command:
